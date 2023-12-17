@@ -5,6 +5,9 @@
 ## Medium blog
 [Enhancing Urban Mobility: Addressing Challenges in Traffic Management through Object Detection Technologies.](https://medium.com/@prathameshamrutkar3/enhancing-urban-mobility-addressing-challenges-in-traffic-management-through-object-detection-e2b465896e30)
 
+## Darknet Command
+[Darknet Command](https://medium.com/@prathameshamrutkar3/training-a-yolo-object-detector-with-darknet-a-comprehensive-guide-c23636a2e288)
+
 ## Github 
 [Road_Traffic_Object_Detection](https://github.com/amrutkar20/Road_Traffic_Object_Detection.git)
 
