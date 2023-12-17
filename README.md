@@ -1,2 +1,2 @@
-# Road_Traffic_Object_Detection
-Road_Traffic YOLOv4_large model OBJECT DETECTOR
+# Road_Traffic_Object_Detection (YOLOv4_large model)
+
