@@ -1,22 +1,22 @@
-# YOLOv4 Large Model - Road Traffic Object Detection
+# YOLOv4 Large Model - Vehicle Object Detection
 
 ![page64](https://github.com/amrutkar20/Road_Traffic_Object_Detection/assets/104386663/50430acc-fb80-46d2-b618-cd5989d5adc0)
 
 ## Medium blog
-[Enhancing Urban Mobility: Addressing Challenges in Traffic Management through Object Detection Technologies.](https://medium.com/@prathameshamrutkar3/enhancing-urban-mobility-addressing-challenges-in-traffic-management-through-object-detection-e2b465896e30)
+[Navigating-the-Roads-A-Deep-Dive-into-Vehicle-Object-Detection](https://medium.com/@prathameshamrutkar3/navigating-the-roads-a-deep-dive-into-vehicle-object-detection-c3c1ac284cc5)
 
 ## Darknet Command
 [Darknet Command](https://medium.com/@prathameshamrutkar3/training-a-yolo-object-detector-with-darknet-a-comprehensive-guide-c23636a2e288)
 
 ## Github 
-[Road_Traffic_Object_Detection](https://github.com/amrutkar20/Road_Traffic_Object_Detection.git)
+[Vehicle_Object_Detection](https://github.com/amrutkar20/Vehicle-Object-Detection.git)
 
 ## Kaggle Dataset
 
-[Road_Traffic_Object_Detection](https://www.kaggle.com/datasets/pamrutkar20/road-traffic-object-detection-dataset)
+[Road Traffic Object Detection Dataset](https://www.kaggle.com/datasets/pamrutkar20/road-traffic-object-detection-dataset)
 
 ## Overview
-This guide provides instructions on how to train the YOLOv4_large model for detecting road traffic objects. Follow these steps to train the model with your own dataset.
+This guide provides instructions on how to train the YOLOv4_large model for detecting Vehicle objects. Follow these steps to train the model with your own dataset.
 
 
 ## Prerequisites
@@ -68,8 +68,6 @@ darknet.exe detector train data/obj.data yolo-obj.cfg yolov4.conv.137
 
 ## Training on Linux
 - For Linux use command:
-## Training on Linux
-- For Linux use command:
   !./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137
 
 ## Monitoring Training
@@ -91,7 +89,7 @@ Open URL `http://ip-address:8090` in Chrome/Firefox browser.
 
 # Conclusion
 
-In conclusion, this guide provides a comprehensive walkthrough for training the YOLOv4_large model for road traffic object detection. By following the outlined steps, users can configure the model, label their dataset, and initiate the training process. Key considerations include adjusting configuration files, labeling images using Yolo_mark, and managing data setup.
+In conclusion, this guide provides a comprehensive walkthrough for training the YOLOv4_large model for Vehicle object detection. By following the outlined steps, users can configure the model, label their dataset, and initiate the training process. Key considerations include adjusting configuration files, labeling images using Yolo_mark, and managing data setup.
 
 The guide covers essential commands for starting and monitoring training, as well as considerations for resuming training from a specific iteration. Users are encouraged to be mindful of potential issues such as nan values during training and out-of-memory errors, with corresponding solutions provided.
 
