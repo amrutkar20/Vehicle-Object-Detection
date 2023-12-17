@@ -34,7 +34,7 @@ This guide provides instructions on how to train the YOLOv4_large model for dete
    - Update [filters=255] to `filters=(classes + 5)x3` in [convolutional] before each [yolo] layer.
 
 ## Gaussian YOLO Configuration
-- If using [Gaussian_yolo] layers, update [filters=57] to `filters=(classes + 9)x3` in [convolutional] before each [Gaussian_yolo] layer.
+- If using [Gaussian_yolo] layers, update [filters=57] to `filters=(classes + 5)x3` in [convolutional] before each [Gaussian_yolo] layer.
 
 ## Labeling Images
 1. Use [Yolo_mark](https://github.com/AlexeyAB/Yolo_mark) for marking bounded boxes on images and generating annotation files.
