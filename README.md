@@ -23,22 +23,22 @@ This guide provides instructions on how to train the YOLOv4_large model for dete
 - Download the YOLOv4_large pre-trained weights file: [yolov4.conv.137](insert_google_drive_link)
 - Install Darknet: [Darknet GitHub](https://github.com/AlexeyAB/darknet)
 
-## Training Configuration
-1. Copy `yolov4.cfg` to `yolo-obj.cfg`.
-2. Modify `yolo-obj.cfg`:
-   - Set `batch=64`.
-   - Set `subdivisions=16`.
-   - Adjust `max_batches` based on the number of classes and training images.
-   - Set network size `width=416` and `height=416` (or multiples of 32).
-   - Change `classes=80` in three [yolo]-layers to your number of objects.
-   - Update [filters=255] to `filters=(classes + 5)x3` in [convolutional] before each [yolo] layer.
-
-## Gaussian YOLO Configuration
-- If using [Gaussian_yolo] layers, update [filters=57] to `filters=(classes + 5)x3` in [convolutional] before each [Gaussian_yolo] layer.
-
 ## Labeling Images
 1. Use [Yolo_mark](https://github.com/AlexeyAB/Yolo_mark) for marking bounded boxes on images and generating annotation files.
 2. Create a `.txt` file for each image with object information in the format: `<object-class> <x_center> <y_center> <width> <height>`.
+
+
+## Training Configuration
+1. Copy `yolov4.cfg` to `yolo-obj.cfg`.
+2. Modify `yolo-obj.cfg`:
+   - change line batch to batch=64
+   - change line subdivisions to subdivisions=16
+   - change line max_batches to (classes*2000, but not less than number of training images and not less than 6000), f.e. max_batches=6000 if you train for 3 classes
+   - change line steps to 80% and 90% of max_batches, f.e. steps=4800,5400
+   - set network size width=416 height=416 or any value multiple of 32.
+   - Change `classes=80` in three [yolo]-layers to your number of objects.
+   - change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer, keep in mind that it only has to be the last [convolutional] before each of the [yolo] layers.
+     
 
 ## Data Setup
 1. Create `obj.names` with object names, each on a new line.
@@ -53,8 +53,14 @@ This guide provides instructions on how to train the YOLOv4_large model for dete
 4. Create `train.txt` with filenames of images, each on a new line.
 
 ## Download Pre-trained Weights
-- Download the pre-trained weights for the convolutional layers and place them in `build/darknet/x64`.
-- For yolov4.cfg: [yolov4.conv.137](insert_google_drive_link)
+- Download pre-trained weights for the convolutional layers and put to the directory build\darknet\x64
+
+- for yolov4.cfg, yolov4-custom.cfg (162 MB): yolov4.conv.137 (Google drive mirror yolov4.conv.137 )
+- for yolov4-tiny.cfg, yolov4-tiny-3l.cfg, yolov4-tiny-custom.cfg (19 MB): yolov4-tiny.conv.29
+- for csresnext50-panet-spp.cfg (133 MB): csresnext50-panet-spp.conv.112
+- for yolov3.cfg, yolov3-spp.cfg (154 MB): darknet53.conv.74
+- for yolov3-tiny-prn.cfg , yolov3-tiny.cfg (6 MB): yolov3-tiny.conv.11
+- for enet-coco.cfg (EfficientNetB0-Yolov3) (14 MB): enetb0-coco.conv.132
 
 ## Training
 - Start training using the command:
